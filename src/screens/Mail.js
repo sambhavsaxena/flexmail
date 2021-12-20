@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { Card } from 'react-bootstrap'
+import ReactMarkdown from 'react-markdown'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+toast.configure()
 
 const Mail = (props) => {
     const [time, setTime] = useState('')
@@ -22,16 +27,14 @@ const Mail = (props) => {
         })
 
     return (
-        <div>
-            <Card className='mx-5'>
-                <Card.Body>
+        <div className='mx-5 my-2'>
+            <Card>
+                <Card.Body className='mx-2 my-2'>
                     <Card.Title>{from}</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">Arrived: {time}</Card.Subtitle>
                     <Card.Subtitle className="mb-2 text-muted">Subject: {subject}</Card.Subtitle>
                     <hr />
-                    <Card.Text>
-                        Content: {textBody}
-                    </Card.Text>
+                    <ReactMarkdown>{textBody}</ReactMarkdown>
                 </Card.Body>
             </Card>
         </div>
