@@ -6,10 +6,10 @@ function Navbar() {
         <div>
             <Nav className="justify-content-center my-4" activeKey="/home">
                 <Nav.Item>
-                    <Nav.Link href="/">Home</Nav.Link>
+                    <Nav.Link href="/">HOME</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href='/about'>About</Nav.Link>
+                    <Nav.Link href='/about'>ABOUT</Nav.Link>
                 </Nav.Item>
             </Nav>
             <hr />

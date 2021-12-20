@@ -78,6 +78,11 @@ const Home = () => {
 
     return (
         <div style={{ minHeight: '92vh' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '80px', flexDirection: 'column' }}>
+                <h3>Welcome to Flexmail</h3>
+                <h5 style={{ marginBottom: '150px' }}>A disposable email generator</h5>
+                <div>Enter your identifier and select your domain before going live.</div>
+            </div>
             <div style={{ display: 'flex', justifyContent: 'center', marginTop: '60px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Row onChange={changed} className="g-2 mx-2">
@@ -101,7 +106,7 @@ const Home = () => {
                 </div>
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', marginTop: '40px', marginBottom: '40px' }}>
-                {identifier && <h5>Your email is: {identifier}@{domain}</h5>}
+                {identifier && <h5>Your temporary email is: {identifier}@{domain}</h5>}
             </div>
             <div>
                 <div style={{ display: 'flex', justifyContent: 'center', marginTop: '40px', marginBottom: '40px' }}>
