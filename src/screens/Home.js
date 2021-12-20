@@ -25,7 +25,6 @@ const Home = () => {
         setDomain(document.getElementById('domain').value)
         axios.get(`https://www.1secmail.com/api/v1/?action=getMessages&login=${identifier}&domain=${domain}`)
             .then(res => {
-                console.log(res.data)
                 setData(res.data)
             })
             .catch(err => {
