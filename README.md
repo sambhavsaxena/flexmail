@@ -39,4 +39,4 @@ Read the React's [contributing guide](https://reactjs.org/contributing/how-to-co
 To help you get your feet wet and get you familiar with our contribution process, we have a list of [good first issues](https://github.com/sambhavsaxena/flexmail/labels/good%20first%20issue) that contain bugs which have a relatively limited scope. This is a great place to get started <3.
 
 ### License
-The Monospace is [MIT licensed](./LICENSE).
+Flexmail is [MIT licensed](./LICENSE).
