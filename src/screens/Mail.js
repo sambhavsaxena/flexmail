@@ -17,7 +17,7 @@ const Mail = (props) => {
     const id = props.id
     axios.get(`https://www.1secmail.com/api/v1/?action=readMessage&login=${identifier}&domain=${domain}&id=${id}`)
         .then(res => {
-            setTime(res.data.date)
+            setTime(new Date().toLocaleString())
             setFrom(res.data.from)
             setSubject(res.data.subject)
             setTextBody(res.data.textBody)
