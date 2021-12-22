@@ -4,6 +4,7 @@ import { Button, Form, Row, Col, FloatingLabel } from 'react-bootstrap'
 import Mail from './Mail'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './home.css'
 
 toast.configure()
 
