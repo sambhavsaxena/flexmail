@@ -106,7 +106,7 @@ const Home = () => {
                     <Button className="btn" onClick={fetch} variant="outline-dark">Refresh</Button>
                 </div>
             </div>
-            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '40px', marginBottom: '40px' }}>
+            <div className="text-center" style={{ display: 'flex', justifyContent: 'center', marginTop: '40px', marginBottom: '40px' }}>
                 {identifier && <h5>Your temporary email is: {identifier}@{domain}</h5>}
             </div>
             <div>
