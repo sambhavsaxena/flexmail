@@ -1,0 +1,16 @@
+@media (min-width:320px)  { 
+  .div{
+    flex-direction: column;
+  }
+  .btn{
+    margin-top: 16px;
+  }
+}
+@media (min-width:480px)  {
+  .div{
+    flex-direction: column;
+  }
+  .btn{
+    margin-top: 16px;
+  }
+}
