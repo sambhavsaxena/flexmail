@@ -85,7 +85,7 @@ const Home = () => {
                 <div className="text-center">Enter your identifier and select your domain before going live.</div>
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', marginTop: '60px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div className="div" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Row onChange={changed} className="g-2 mx-2">
                         <Col md>
                             <FloatingLabel label="Identifier">
