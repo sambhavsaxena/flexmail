@@ -31,7 +31,7 @@ const Mail = (props) => {
             <Card>
                 <Card.Body className='mx-2 my-2'>
                     <Card.Title>{from}</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">Arrived: {time}</Card.Subtitle>
+                    <Card.Subtitle className="mb-2 text-muted">Arrived(CET): {time}</Card.Subtitle>
                     <Card.Subtitle className="mb-2 text-muted">Subject: {subject}</Card.Subtitle>
                     <hr />
                     <ReactMarkdown>{textBody}</ReactMarkdown>
