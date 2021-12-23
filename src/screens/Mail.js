@@ -7,10 +7,10 @@ import 'react-toastify/dist/ReactToastify.css';
 toast.configure()
 
 const Mail = (props) => {
-    const [time, setTime] = useState('')
-    const [from, setFrom] = useState('')
-    const [subject, setSubject] = useState('')
-    const [body, setBody] = useState('<div>his</div>')
+    const [time, setTime] = useState('NULL')
+    const [from, setFrom] = useState('<div>NULL</div>')
+    const [subject, setSubject] = useState('<div>NULL</div>')
+    const [body, setBody] = useState('<div>NULL</div>')
     const identifier = props.identifier
     const domain = props.domain
     const id = props.id
@@ -31,7 +31,7 @@ const Mail = (props) => {
             <Card>
                 <Card.Body className='mx-2 my-2'>
                     <Card.Title>{from}</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">Arrived(CET): {time}</Card.Subtitle>
+                    <Card.Subtitle className="mb-2 text-muted">Arrived(IST): {time}</Card.Subtitle>
                     <Card.Subtitle className="mb-2 text-muted">Subject: {subject}</Card.Subtitle>
                     <hr />
                     <div style={{ overflow: 'auto' }} dangerouslySetInnerHTML={{ __html: body }} />
