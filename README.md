@@ -18,8 +18,8 @@ React has been designed for gradual adoption from the start, and **you can use a
 * Alternatively, you can download the source and set it up with Github Desktop.
 * Open the root folder in the code editor you prefer, and run the following commands:
 
-1) npm install
-2) cd ./flexmail/ npm start
+1) cd ./flexmail/ npm install
+2) npm start
 
 ## Documentation
 
