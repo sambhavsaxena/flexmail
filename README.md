@@ -7,6 +7,7 @@ Because of its privacy-related liberations, we keep the user data and usage stat
 * **Saves a lot of efforts:** Several temporary email generators are very hectic to use as they have high latency.
 * **Unlimited fetch requests:** There's no limit to number of fetch requests, and each request responds with the same reaction time being `<50ms`.
 * **Clean UI:** Visit the web app once, you're gonna love it <3.
+* **Attachments:** With this release, users will be able to download attachments on the mails received.
 * **Longer disposable period:** Most temp mail generators provide random difficult email addresses to remember, and have a limit of 10 minutes, we here provide an upper time limit of `45 minutes`.
 
 ## Installation
