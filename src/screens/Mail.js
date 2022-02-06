@@ -42,7 +42,7 @@ const Mail = (props) => {
                         {data.map((data) => {
                             return (
                                 <div key={data.size}>
-                                    <a href={`https://www.1secmail.com/api/v1/?action=download&login=${identifier}&domain=${domain}&id=${id}&file=${data.filename}`} target={`_blank`}>{data.filename}</a>
+                                    <a href={`https://www.1secmail.com/api/v1/?action=download&login=${identifier}&domain=${domain}&id=${id}&file=${data.filename}`}>{data.filename}</a>
                                 </div>
                             )
                         })}
