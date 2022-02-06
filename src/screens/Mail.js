@@ -39,7 +39,7 @@ const Mail = (props) => {
                     <Card.Subtitle className="mb-2 text-muted">Arrived(IST): {time}</Card.Subtitle>
                     <Card.Subtitle className="mb-2 text-muted">Subject: {subject}</Card.Subtitle>
                     <Card.Subtitle className="mb-2 text-muted">Attachments:
-                        {data.map((data) => {
+                        {data && data.map((data) => {
                             return (
                                 <div key={data.size}>
                                     <a href={`https://www.1secmail.com/api/v1/?action=download&login=${identifier}&domain=${domain}&id=${id}&file=${data.filename}`}>{data.filename}</a>
