@@ -103,7 +103,9 @@ const Home = () => {
                             </FloatingLabel>
                         </Col>
                     </Row>
-                    <Button className="btn" onClick={fetch} variant="outline-dark">Refresh</Button>
+                    {
+                        identifier ? <Button className="btn" onClick={fetch} variant="outline-dark">Refresh</Button> : <Button className="btn" onClick={fetch} variant="outline-dark" disabled>Refresh</Button>
+                    }
                 </div>
             </div>
             <div className="text-center" style={{ display: 'flex', justifyContent: 'center', marginTop: '40px', marginBottom: '40px' }}>
