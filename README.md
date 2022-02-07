@@ -14,7 +14,7 @@ Because of its privacy-related liberations, we keep the user data and usage stat
 
 React has been designed for gradual adoption from the start, and **you can use as little or as much React as you need**:
 
-* Fork and clone [this](https://github.com/sambhavsaxena/flexmail) repository make an instant copy of the content.
+* Fork and clone [this](https://github.com/sambhavsaxena/flexmail) repository to create an instant copy of the code.
 * Alternatively, you can download the source and set it up with Github Desktop.
 * Open the root folder in the code editor you prefer, and run the following commands:
 
