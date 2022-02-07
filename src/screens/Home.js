@@ -89,7 +89,7 @@ const Home = () => {
                     <Row onChange={changed} className="g-2 mx-2">
                         <Col md>
                             <FloatingLabel label="Identifier">
-                                <Form.Control type="email" id="identifier" placeholder="Specify your identifier" />
+                                <Form.Control type="email" id="identifier" placeholder="Specify your identifier" maxLength={'25'} />
                             </FloatingLabel>
                         </Col>
                         <Col md>
