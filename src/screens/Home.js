@@ -109,7 +109,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="text-center" style={{ display: 'flex', justifyContent: 'center', marginTop: '40px', marginBottom: '40px' }}>
-                {identifier && <h5>Your temporary email is: {identifier}@{domain}</h5>}
+                {identifier && <p style={{ margin: '10px', overflow: 'auto' }}>Your temporary email is: {identifier}@{domain}</p>}
             </div>
             <div>
                 <div style={{ display: 'flex', justifyContent: 'center', marginTop: '40px', marginBottom: '40px' }}>

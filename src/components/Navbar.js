@@ -4,7 +4,7 @@ import { Nav } from 'react-bootstrap'
 function Navbar() {
     return (
         <div>
-            <Nav className="justify-content-center my-4" activeKey="/home" style={{ marginLeft: '50px' }}>
+            <Nav className="justify-content-center my-4" activeKey="/home" style={{ marginLeft: '30px' }}>
                 <Nav.Item>
                     <Nav.Link href="/">HOME</Nav.Link>
                 </Nav.Item>
