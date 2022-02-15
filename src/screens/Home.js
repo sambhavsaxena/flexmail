@@ -15,6 +15,13 @@ const Home = () => {
     const [domain, setDomain] = useState('')
     const [data, setData] = useState([])
 
+    const handleKeyDown = (ev) => {
+        //Send on enter:
+        if (ev.keyCode === 13) {
+            if (!!identifier) fetch()
+        }
+    }
+
     useEffect(() => {
         axios.get('https://www.1secmail.com/api/v1/?action=getDomainList')
             .then(res => {
@@ -89,7 +96,7 @@ const Home = () => {
                     <Row onChange={changed} className="g-2 mx-2">
                         <Col md>
                             <FloatingLabel label="Identifier">
-                                <Form.Control type="text" id="identifier" placeholder="Specify your identifier" maxLength={'25'} />
+                                <Form.Control type="text" id="identifier" placeholder="Specify your identifier" maxLength={'25'} onKeyDown={handleKeyDown} />
                             </FloatingLabel>
                         </Col>
                         <Col md>
