@@ -96,7 +96,7 @@ const Home = () => {
                     <Row onChange={changed} className="g-2 mx-2">
                         <Col md>
                             <FloatingLabel label="Identifier">
-                                <Form.Control type="text" id="identifier" placeholder="Specify your identifier" maxLength={'25'} onKeyDown={handleKeyDown} />
+                                <Form.Control type="text" id="identifier" placeholder="Specify your identifier" autoFocus maxLength={'25'} onKeyDown={handleKeyDown} />
                             </FloatingLabel>
                         </Col>
                         <Col md>
