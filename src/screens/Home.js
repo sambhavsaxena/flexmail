@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Button, Form, Row, Col, FloatingLabel } from 'react-bootstrap'
 import Mail from './Mail'
+import Loading from '../components/Loading';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './home.css'
@@ -14,6 +15,7 @@ const Home = () => {
     const [identifier, setIdentifier] = useState('')
     const [domain, setDomain] = useState('')
     const [data, setData] = useState([])
+    const [loading, setLoading] = useState(false)
 
     const handleKeyDown = (ev) => {
         //Send on enter:
@@ -23,9 +25,11 @@ const Home = () => {
     }
 
     useEffect(() => {
+        setLoading(true);
         axios.get('https://www.1secmail.com/api/v1/?action=getDomainList')
             .then(res => {
                 setDomains(res.data)
+                setLoading(false);
             })
             .catch(err => {
                 console.log(err)
@@ -85,49 +89,56 @@ const Home = () => {
     }
 
     return (
-        <div style={{ minHeight: '92vh' }}>
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '80px', flexDirection: 'column' }}>
-                <h3>Welcome to Flexmail</h3>
-                <h5 style={{ marginBottom: '100px' }}>A disposable email generator</h5>
-                <div className="text-center">Enter your identifier and select your domain before going live.</div>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '60px' }}>
-                <div className="div" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <Row onChange={changed} className="g-2 mx-2">
-                        <Col md>
-                            <FloatingLabel label="Identifier">
-                                <Form.Control type="text" id="identifier" placeholder="Specify your identifier" autoFocus maxLength={'25'} onKeyDown={handleKeyDown} />
-                            </FloatingLabel>
-                        </Col>
-                        <Col md>
-                            <FloatingLabel label="Domain">
-                                <Form.Select id='domain' aria-label="Floating label select example">
-                                    {domains.map((domain, index) => {
-                                        return <option key={index}>{domain}</option>
-                                    }
-                                    )}
-                                </Form.Select>
-                            </FloatingLabel>
-                        </Col>
-                    </Row>
+        <div>
+            {
+                <div style={{ minHeight: '92vh' }}>
+                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '80px', flexDirection: 'column' }}>
+                        <h3>Flexmail</h3>
+                        <h5 style={{ marginBottom: '100px' }}>A customizable temporary email generator</h5>
+                        <div className="text-center">Enter your identifier and select your domain to fetch mails.</div>
+                    </div>
                     {
-                        identifier ? <Button className="btn" onClick={fetch} variant="outline-dark">Refresh</Button> : <Button className="btn" onClick={fetch} variant="outline-dark" disabled>Refresh</Button>
+                        loading ? <Loading /> :
+                            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '60px' }}>
+                                <div className="div" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                    <Row onChange={changed} className="g-2 mx-2">
+                                        <Col md>
+                                            <FloatingLabel label="Identifier">
+                                                <Form.Control type="text" id="identifier" placeholder="Specify your identifier" autoFocus maxLength={'25'} onKeyDown={handleKeyDown} />
+                                            </FloatingLabel>
+                                        </Col>
+                                        <Col md>
+                                            <FloatingLabel label="Domain">
+                                                <Form.Select id='domain' aria-label="Floating label select example">
+                                                    {domains.map((domain, index) => {
+                                                        return <option key={index}>{domain}</option>
+                                                    }
+                                                    )}
+                                                </Form.Select>
+                                            </FloatingLabel>
+                                        </Col>
+                                    </Row>
+                                    {
+                                        identifier ? <Button className="btn" onClick={fetch} variant="outline-dark">Refresh</Button> : <Button className="btn" onClick={fetch} variant="outline-dark" disabled>Refresh</Button>
+                                    }
+                                </div>
+                            </div>
                     }
+                    <div className="text-center" style={{ display: 'flex', justifyContent: 'center', marginTop: '40px', marginBottom: '40px' }}>
+                        {identifier && <p style={{ margin: '10px', overflow: 'auto' }}>Your temporary email is: {identifier}@{domain}</p>}
+                    </div>
+                    <div>
+                        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '40px', marginBottom: '40px' }}>
+                            Total count: {data.length}
+                        </div>
+                    </div>
+                    <div>
+                        {
+                            data && data.map(data => <Mail key={data.id} identifier={identifier} domain={domain} id={data.id} />)
+                        }
+                    </div>
                 </div>
-            </div>
-            <div className="text-center" style={{ display: 'flex', justifyContent: 'center', marginTop: '40px', marginBottom: '40px' }}>
-                {identifier && <p style={{ margin: '10px', overflow: 'auto' }}>Your temporary email is: {identifier}@{domain}</p>}
-            </div>
-            <div>
-                <div style={{ display: 'flex', justifyContent: 'center', marginTop: '40px', marginBottom: '40px' }}>
-                    Total count: {data.length}
-                </div>
-            </div>
-            <div>
-                {
-                    data && data.map(data => <Mail key={data.id} identifier={identifier} domain={domain} id={data.id} />)
-                }
-            </div>
+            }
         </div>
     )
 }

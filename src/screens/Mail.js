@@ -8,10 +8,10 @@ toast.configure()
 
 const Mail = (props) => {
 
-    const [time, setTime] = useState('NULL')
-    const [from, setFrom] = useState('NULL')
-    const [subject, setSubject] = useState('NULL')
-    const [body, setBody] = useState('<div>NULL</div>')
+    const [time, setTime] = useState()
+    const [from, setFrom] = useState()
+    const [subject, setSubject] = useState()
+    const [body, setBody] = useState()
     const [data, setData] = useState([])
     const identifier = props.identifier
     const domain = props.domain
@@ -20,7 +20,7 @@ const Mail = (props) => {
         axios.get(`https://www.1secmail.com/api/v1/?action=readMessage&login=${identifier}&domain=${domain}&id=${id}`)
             .then(res => {
                 let tempdate = new Date(res.data.date)
-                setTime(new Date(Date.UTC(tempdate.getFullYear(), tempdate.getMonth(), tempdate.getDate(), tempdate.getHours() - 1, tempdate.getMinutes(), tempdate.getSeconds())).toLocaleString())
+                setTime(new Date(Date.UTC(tempdate.getFullYear(), tempdate.getMonth(), tempdate.getDate(), tempdate.getHours() - 2, tempdate.getMinutes(), tempdate.getSeconds())).toLocaleString())
                 setFrom(res.data.from)
                 setSubject(res.data.subject)
                 setBody(res.data.body)
@@ -29,7 +29,7 @@ const Mail = (props) => {
             .catch(err => {
                 console.log(err)
             })
-    }, [domain, identifier, id])
+    }, [domain])
 
     return (
         <div className='mx-5 my-2'>
