@@ -15,7 +15,7 @@ Below is the latency-time graph tested over a decent network-
 ![statistics for flexmail](https://user-images.githubusercontent.com/76242518/183702780-9cee1d9c-7ada-48d6-b4bd-4171466027fe.png)
 
 For detailed statistics refer the image below-
-![detailed statistics](https://user-images.githubusercontent.com/76242518/183700931-4fee1ace-fd2d-4e3e-8f80-966634d9496d.png)
+![detailed statistics](https://user-images.githubusercontent.com/76242518/183703252-fb46723c-3dfd-4338-b8cd-21a943b9c600.png)
 
 ## Installation
 
