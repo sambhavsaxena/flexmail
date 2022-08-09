@@ -10,9 +10,9 @@ Because of its privacy-related liberations, we keep the user data and usage stat
 * **Attachments support:** With this release, users will be able to download attachments on the mails received.
 * **Longer disposable period:** The `1secmail` server provides a disposable time upto `120 minutes`.
 * **Low latency requests:** Each request from the client responds within `<50ms`.
+
 ![stats](https://user-images.githubusercontent.com/76242518/183700378-5e225ecb-377d-48f9-ad94-b4c43d1f814b.png)
 
----
 
 ## Installation
 
