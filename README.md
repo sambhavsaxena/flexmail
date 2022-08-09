@@ -11,7 +11,7 @@ Because of its privacy-related liberations, we keep the user data and usage stat
 * **Longer disposable period:** The `1secmail` server provides a disposable time upto `120 minutes`.
 * **Low latency requests:** Each request from the client responds within `<50ms`.
 
-![stats](https://user-images.githubusercontent.com/76242518/183700378-5e225ecb-377d-48f9-ad94-b4c43d1f814b.png)
+![stats](https://user-images.githubusercontent.com/76242518/183700931-4fee1ace-fd2d-4e3e-8f80-966634d9496d.png)
 
 
 ## Installation
