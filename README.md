@@ -6,7 +6,7 @@ Because of its privacy-related liberations, we keep the user data and usage stat
 * **Why this:** Can be used to generate emails instantly, with the name of your choice.
 * **Saves a lot of efforts:** Several temporary email generators are very hectic to use as they have high latency.
 * **No limit on requests:** There's no limit to number of fetch requests, and each request responds with the same reaction time being `<50ms`.
-* **Clean UI:** No longer those ad-frozen websites to generate temp mails.
+* **Clean UI:** No longer visit those ad-frozen websites to generate temp mails.
 * **Attachments support:** With this release, users will be able to download attachments on the mails received.
 * **Longer disposable period:** The `1secmail` server provides a disposable time upto `120 minutes`.
 
