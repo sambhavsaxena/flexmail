@@ -16,7 +16,8 @@ Because of its privacy-related liberations, we keep the user data and usage stat
 ![test](https://raw.githubusercontent.com/thatsameguyokay/images/main/flexmail.gif)
 
 
-Below is the latency-time graph on fetch requests tested over a decent network-
+<div align="center">Below is the latency-time graph on fetch requests tested over a decent network-</div>
+
 ![statistics for flexmail](https://user-images.githubusercontent.com/76242518/183702780-9cee1d9c-7ada-48d6-b4bd-4171466027fe.png)
 
 ![detailed statistics](https://user-images.githubusercontent.com/76242518/183703932-7556f456-4c5b-4e01-8ef0-2643a62c04bb.png)
