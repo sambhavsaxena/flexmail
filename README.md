@@ -11,13 +11,16 @@ Because of its privacy-related liberations, we keep the user data and usage stat
 * **Longer disposable period:** The `1secmail` server provides a disposable time upto `120 minutes`.
 * **Low latency requests:** Each request from the client responds with latency `<50ms`.
 
+<div align="center">DEMO</div>
 ![test](https://raw.githubusercontent.com/thatsameguyokay/images/main/flexmail.gif)
 
-Below is the latency-time graph tested over a decent network-
+
+Below is the latency-time graph on fetch requests tested over a decent network-
 ![statistics for flexmail](https://user-images.githubusercontent.com/76242518/183702780-9cee1d9c-7ada-48d6-b4bd-4171466027fe.png)
 
-For detailed statistics-
 ![detailed statistics](https://user-images.githubusercontent.com/76242518/183703932-7556f456-4c5b-4e01-8ef0-2643a62c04bb.png)
+
+For detailed statistics, try out the app on different devices, and run tests in a constrained environment.
 
 ## Installation
 
