@@ -21,7 +21,7 @@ For detailed statistics-
 
 ## Installation
 
-React has been designed for gradual adoption from the start, and **you can use as little or as much React as you need**:
+Follow the steps below to install the app locally: 
 
 * Fork and clone [this](https://github.com/sambhavsaxena/flexmail) repository to create an instant copy of the code.
 * Alternatively, you can download the source and set it up with Github Desktop.
