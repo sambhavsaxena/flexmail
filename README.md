@@ -12,6 +12,7 @@ Because of its privacy-related liberations, we keep the user data and usage stat
 * **Low latency requests:** Each request from the client responds with latency `<50ms`.
 
 <div align="center">DEMO</div>
+
 ![test](https://raw.githubusercontent.com/thatsameguyokay/images/main/flexmail.gif)
 
 
