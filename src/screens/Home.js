@@ -4,6 +4,7 @@ import { Button, Form, Row, Col, FloatingLabel } from 'react-bootstrap'
 import Mail from './Mail'
 import Loading from '../components/Loading';
 import { toast } from 'react-toastify';
+import GitHubButton from 'react-github-btn'
 import 'react-toastify/dist/ReactToastify.css';
 import './home.css'
 
@@ -36,7 +37,7 @@ const Home = () => {
             })
     }, [])
 
-    const changed = () => {
+    const changed = (ev) => {
         setIdentifier(document.getElementById('identifier').value)
         setDomain(document.getElementById('domain').value)
     }
@@ -44,18 +45,6 @@ const Home = () => {
     const fetch = () => {
         setIdentifier(document.getElementById('identifier').value)
         setDomain(document.getElementById('domain').value)
-        if (!identifier) {
-            toast.error(`Identifier is required!`, {
-                position: "bottom-right",
-                autoClose: 3000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-            });
-            return
-        }
         axios.get(`https://www.1secmail.com/api/v1/?action=getMessages&login=${identifier}&domain=${domain}`)
             .then(res => {
                 setData(res.data)
@@ -94,7 +83,12 @@ const Home = () => {
                 <div style={{ minHeight: '92vh' }}>
                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '80px', flexDirection: 'column' }}>
                         <h3>Flexmail</h3>
-                        <h5 style={{ marginBottom: '100px' }}>A customizable temporary email generator</h5>
+                        <h5>A customizable temporary email generator</h5>
+                        <div style={{ marginBottom: '80px', marginTop: '10px' }}>
+                            <GitHubButton href="https://github.com/sambhavsaxena/flexmail" data-color-scheme="no-preference: light; light: light; dark: light_high_contrast;" data-icon="octicon-star" data-show-count="true" aria-label="Star sambhavsaxena/flexmail on GitHub">Star</GitHubButton>
+                            {' '}
+                            <GitHubButton href="https://github.com/sambhavsaxena/flexmail/fork" data-color-scheme="no-preference: light; light: light; dark: light_high_contrast;" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork sambhavsaxena/flexmail on GitHub">Fork</GitHubButton>
+                        </div>
                         <div className="text-center">Enter your identifier and select your domain to fetch mails.</div>
                     </div>
                     {
@@ -119,13 +113,13 @@ const Home = () => {
                                         </Col>
                                     </Row>
                                     {
-                                        identifier ? <Button className="btn" onClick={fetch} variant="outline-dark">Refresh</Button> : <Button className="btn" onClick={fetch} variant="outline-dark" disabled>Refresh</Button>
+                                        identifier && !identifier.includes(' ') ? <Button className="btn" onClick={fetch} variant="outline-dark">Refresh</Button> : <Button className="btn" onClick={fetch} variant="outline-dark" disabled>Refresh</Button>
                                     }
                                 </div>
                             </div>
                     }
                     <div className="text-center" style={{ display: 'flex', justifyContent: 'center', marginTop: '40px', marginBottom: '40px' }}>
-                        {identifier && <p style={{ margin: '10px', overflow: 'auto' }}>Your temporary email is: {identifier}@{domain}</p>}
+                        {(identifier && !identifier.includes(' ')) && <p style={{ margin: '10px', overflow: 'auto' }}>Your temporary email is: {identifier}@{domain}</p>}
                     </div>
                     <div>
                         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '40px', marginBottom: '40px' }}>
