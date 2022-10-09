@@ -11,20 +11,30 @@ import './home.css'
 toast.configure()
 
 const Home = () => {
-
     const [domains, setDomains] = useState([])
     const [identifier, setIdentifier] = useState('')
     const [domain, setDomain] = useState('')
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(false)
-
     const handleKeyDown = (ev) => {
         //Send on enter:
         if (ev.keyCode === 13) {
-            if (!!identifier) fetch()
+            if (!!identifier && !identifier.includes(' ')) {
+                fetch()
+            }
+            else {
+                toast.error(`Invalid identifier`, {
+                    position: "bottom-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
+            }
         }
     }
-
     useEffect(() => {
         setLoading(true);
         axios.get('https://www.1secmail.com/api/v1/?action=getDomainList')
@@ -36,12 +46,10 @@ const Home = () => {
                 console.log(err)
             })
     }, [])
-
     const changed = (ev) => {
         setIdentifier(document.getElementById('identifier').value)
         setDomain(document.getElementById('domain').value)
     }
-
     const fetch = () => {
         setIdentifier(document.getElementById('identifier').value)
         setDomain(document.getElementById('domain').value)

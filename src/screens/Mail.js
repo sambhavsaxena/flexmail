@@ -7,7 +7,6 @@ import 'react-toastify/dist/ReactToastify.css';
 toast.configure()
 
 const Mail = (props) => {
-
     const [time, setTime] = useState()
     const [from, setFrom] = useState()
     const [subject, setSubject] = useState()
@@ -29,7 +28,7 @@ const Mail = (props) => {
             .catch(err => {
                 console.log(err)
             })
-    }, [domain])
+    }, [domain, identifier, id])
 
     return (
         <div className='mx-5 my-2'>
