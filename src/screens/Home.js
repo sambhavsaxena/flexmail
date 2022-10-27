@@ -93,9 +93,9 @@ const Home = () => {
                         <h3>Flexmail</h3>
                         <h5>A customizable temporary email generator</h5>
                         <div style={{ marginBottom: '80px', marginTop: '10px' }}>
-                            <GitHubButton href="https://github.com/sambhavsaxena/flexmail" data-color-scheme="no-preference: light; light: light; dark: light_high_contrast;" data-icon="octicon-star" data-show-count="true" aria-label="Star sambhavsaxena/flexmail on GitHub">Star</GitHubButton>
+                            <GitHubButton href="https://github.com/sambhavsaxena/flexmail" data-icon="octicon-star" data-show-count="true" aria-label="Star sambhavsaxena/flexmail on GitHub">Star</GitHubButton>
                             {' '}
-                            <GitHubButton href="https://github.com/sambhavsaxena/flexmail/fork" data-color-scheme="no-preference: light; light: light; dark: light_high_contrast;" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork sambhavsaxena/flexmail on GitHub">Fork</GitHubButton>
+                            <GitHubButton href="https://github.com/sambhavsaxena/flexmail/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork sambhavsaxena/flexmail on GitHub">Fork</GitHubButton>
                         </div>
                         <div className="text-center">Enter your identifier and select your domain to fetch mails.</div>
                     </div>
