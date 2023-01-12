@@ -1,6 +1,6 @@
 # [Flexmail](https://flexmail.vercel.app)
 
-Flexmail is a disposable temporary email generator, which can be used for wide range of purposes including protection from spammers. `1secmail` servers are trusted to be one of the fastest servers when it comes to email generators. Hence a fast and customizable frontend to this was much needed.
+Flexmail is a disposable temporary email generator, which can be used for wide range of purposes including protection from spammers. `1secmail` servers are trusted to be one of the fastest servers when it comes to email generators. Hence a fast and customizable frontend was much needed.
 
 * **Why this:** Can be used to generate emails instantly, with the name of your choice.
 * **Saves a lot of efforts:** Several temporary email generators are very hectic to use as they have high latency.
