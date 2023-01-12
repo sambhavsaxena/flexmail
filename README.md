@@ -12,7 +12,7 @@ Flexmail is a disposable temporary email generator, which can be used for wide r
 
 <div align="center">DEMO</div>
 
-![test](https://raw.githubusercontent.com/thatsameguyokay/images/main/flexmail.gif)
+![test](https://cdn.statically.io/gh/thatsameguyokay/images/main/flexmail.gif)
 
 
 <div align="center">Below is the latency-time graph on fetch requests tested over a decent network-</div>
