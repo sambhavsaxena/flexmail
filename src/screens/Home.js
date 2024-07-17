@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Button, Form, Row, Col, FloatingLabel } from "react-bootstrap";
 import Mail from "./Mail";
 import Loading from "../components/Loading";
@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 import GitHubButton from "react-github-btn";
 import "react-toastify/dist/ReactToastify.css";
 import "./home.css";
+import { FaCheckCircle } from 'react-icons/fa';
 
 toast.configure();
 
@@ -16,6 +17,24 @@ const Home = () => {
   const [domain, setDomain] = useState("");
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [isCopied, setIsCopied] = useState(false);
+  const divRef = useRef(null);
+
+  const handleCopy = () => {
+    if (divRef.current) {
+      navigator.clipboard.writeText(divRef.current.textContent)
+        .then(() => {
+          setIsCopied(true);
+          setTimeout(() => {
+            setIsCopied(false);
+          }, 2000);
+        })
+        .catch(err => {
+          console.error('Failed to copy text: ', err);
+        });
+    }
+  };
+
   const handleKeyDown = (ev) => {
     //Send on enter:
     if (ev.keyCode === 13) {
@@ -200,8 +219,14 @@ const Home = () => {
             }}
           >
             {identifier && !identifier.includes(" ") && (
-              <p style={{ margin: "10px", overflow: "auto" }}>
-                Your temporary email is: {identifier}@{domain}
+              <p style={{ margin: "10px", overflow: "auto", display: "flex", flexDirection: "row" }}>
+                Your temporary email is:
+                <div ref={divRef} onClick={handleCopy} style={{ cursor: 'pointer', paddingLeft: "5px"}}>
+                {identifier}@{domain}
+                {isCopied && 
+                  <FaCheckCircle style={{ color: 'green', marginLeft: '10px' }} />
+                }
+                </div>
               </p>
             )}
           </div>
