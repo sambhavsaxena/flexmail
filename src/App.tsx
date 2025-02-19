@@ -49,7 +49,9 @@ function App() {
   const handleCopyEmail = () => {
     if (account?.email) {
       navigator.clipboard.writeText(account.email);
-      toast.success('Email copied to clipboard!');
+      toast.success('Email copied to clipboard!', {
+        duration: 1000
+      });
     }
   };
 
@@ -66,7 +68,9 @@ function App() {
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center gap-2">
             <Mail className="w-6 h-6 text-neon-blue" />
-            <h1 className="text-xl font-bold">Flexmail</h1>
+            <h1 className="text-xl font-bold">Flexmail
+              <div style={{fontSize: "12px"}}>By <a href="https://github.com/sambhavsaxena" className="text-neon-blue hover:underline">Sambhav Saxena</a></div>
+            </h1>
           </div>
           <button
             onClick={() => setDarkMode(!darkMode)}
