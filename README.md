@@ -2,12 +2,20 @@
 
 Flexmail is a disposable temporary email generator, which can be used for wide range of purposes including protection from spammers. `1secmail` servers are trusted to be one of the fastest servers when it comes to email generators. Hence a fast and customizable frontend was much needed.
 
+**BREAKIN UPDATE**
+`1secmail` has officially announced the closure of their services. Hence, the app will no longer be functional. However, I follow a no strings attached philosophy, and hence the code will be open sourced for anyone to use.
+
+For now, it uses another API from RapidAPI, which is not as fast as `1secmail`, but still serves the purpose. The app is now live at [Flexmail](https://flexmail.vercel.app).
+
+Moreover, since this is an old project, and Meta has officially announced their discontinuation of Create-react-app, I have migrated the project to Vite.
+
 * **Why this:** Can be used to generate emails instantly, with the name of your choice.
 * **Saves a lot of efforts:** Several temporary email generators are very hectic to use as they have high latency.
-* **No limit on requests:** Users can fire unlimited number of fetch requests without time boundation.
+* ~~**No limit on requests:** Users can fire unlimited number of fetch requests without time boundation.~~
+* **Limited use API:** Since the support through 1secmail has been removed, the app now uses a limited use API from RapidAPI.
 * **Clean UI:** No longer visit those ad-ridden websites to generate temporary mails.
-* **Attachments support:** With this release, users will be able to download attachments from the mails.
-* **Longer disposable period:** The `1secmail` server provides a disposable time of over `120 minutes`.
+* ~~**Attachments support:** With this release, users will be able to download attachments from the mails.~~
+* **No longer supports attachments:** Again, due to the change in API, the app no longer supports attachments.
 * **Low latency requests:** Each request from the client responds with latency `<50ms`.
 
 <div align="center">DEMO</div>
@@ -36,18 +44,18 @@ Follow the steps below to install the app locally:
 
 ## Documentation
 
-Check out the [Getting Started](https://reactjs.org/docs/getting-started.html) page for a quick overview of the project structure.
+Check out the [Getting Started](https://vite.dev/guide/) page for a quick overview of the project structure.
 
 You can improve it by sending pull requests to [this repository](https://github.com/sambhavsaxena/flexmail).
 
 ## Contributing
-The main purpose of this repository is to continue evolving React core, making it faster and easier to use. Development of React happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Read below to learn how you can take part in improving React.
+The main purpose of this repository is to continue evolving Vite core, making it faster and easier to use. Development of Vite happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Read below to learn how you can take part in improving Vite.
 
 ### Code of Conduct
 Flexmail has adopted a Code of Conduct that we expect project participants to adhere to. Please read [the full text](https://code.fb.com/codeofconduct) so that you can understand what actions will and will not be tolerated.
 
 ### Contributing Guide
-Read the React's [contributing guide](https://reactjs.org/contributing/how-to-contribute.html) to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to React, or overall MERN.
+Read the Vite's [contributing guide](https://github.com/vitejs/vite/blob/main/CONTRIBUTING.md) to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to Vite, or overall MERN.
 
 ### Good First Issues
 To help you get your feet wet and get you familiar with our contribution process, we have a list of [good first issues](https://github.com/sambhavsaxena/flexmail/labels/good%20first%20issue) that contain bugs which have a relatively limited scope. This is a great place to get started <3.
