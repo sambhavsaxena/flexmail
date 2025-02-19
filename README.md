@@ -18,18 +18,7 @@ Moreover, since this is an old project, and Meta has officially announced their 
 * **No longer supports attachments:** Again, due to the change in API, the app no longer supports attachments.
 * **Low latency requests:** Each request from the client responds with latency `<50ms`.
 
-<div align="center">DEMO</div>
-
-![test](https://cdn.statically.io/gh/thatsameguyokay/images/main/flexmail.gif)
-
-
-<div align="center">Below is the latency-time graph on fetch requests tested over a decent network-</div>
-
-![statistics for flexmail](https://user-images.githubusercontent.com/76242518/183702780-9cee1d9c-7ada-48d6-b4bd-4171466027fe.png)
-
-![detailed statistics](https://user-images.githubusercontent.com/76242518/183703932-7556f456-4c5b-4e01-8ef0-2643a62c04bb.png)
-
-For detailed statistics, try out the app on different devices, and run tests in a constrained environment.
+https://github.com/user-attachments/assets/8e18a52a-15cc-42d2-bf4d-9d31cf8f8c54
 
 ## Installation
 
@@ -40,7 +29,7 @@ Follow the steps below to install the app locally:
 * Open the root folder in the code editor you prefer, and run the following commands:
 
 1) cd ./flexmail/ && npm install
-2) npm start
+2) npm run dev
 
 ## Documentation
 
