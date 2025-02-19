@@ -1,11 +1,9 @@
 # [Flexmail](https://flexmail.vercel.app)
 
-Flexmail is a disposable temporary email generator, which can be used for wide range of purposes including protection from spammers. `1secmail` servers are trusted to be one of the fastest servers when it comes to email generators. Hence a fast and customizable frontend was much needed.
+Flexmail is a disposable temporary email generator, which can be used for wide range of purposes including protection from spammers. `1secmail` servers ~~are~~ were trusted to be one of the fastest servers when it comes to email generators. Hence a fast and customizable frontend was much needed.
 
 **BREAKIN UPDATE**
-`1secmail` has officially announced the closure of their services. Hence, the app will no longer be functional. However, I follow a no strings attached philosophy, and hence the code will be open sourced for anyone to use.
-
-For now, it uses another API from RapidAPI, which is not as fast as `1secmail`, but still serves the purpose. The app is now live at [Flexmail](https://flexmail.vercel.app).
+`1secmail` has officially announced the closure of their services. Hence, the app will no longer support `1secmail`. However, I follow a no strings attached philosophy, and hence for now, it uses another API from Rapid, which still serves the purpose. The app is now live at [Flexmail](https://flexmail.vercel.app).
 
 Moreover, since this is an old project, and Meta has officially announced their discontinuation of Create-react-app, I have migrated the project to Vite.
 
