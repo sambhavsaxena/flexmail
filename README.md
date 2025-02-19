@@ -7,7 +7,7 @@ Flexmail is a disposable temporary email generator, which can be used for wide r
 
 Moreover, since this is an old project, and Meta has officially announced their discontinuation of Create-react-app, I have migrated the project to Vite.
 
-* **Why this:** Can be used to generate emails instantly, with the name of your choice.
+* **Why this:** Can be used to generate emails instantly ~~, with the name of your choice~~.
 * **Saves a lot of efforts:** Several temporary email generators are very hectic to use as they have high latency.
 * ~~**No limit on requests:** Users can fire unlimited number of fetch requests without time boundation.~~
 * **Limited use API:** Since the support through 1secmail has been removed, the app now uses a limited use API from RapidAPI.
